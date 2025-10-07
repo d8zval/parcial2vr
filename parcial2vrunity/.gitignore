@@ -100,3 +100,15 @@ InitTestScene*.unity*
 
 # Vuforia SDK - evita subir archivos grandes
 /[Aa]ssets/Vuforia/
+
+# UPM / cachés de paquetes (no versionar)
+Packages/PackageCache/
+# Si importas Samples de Vuforia, que no se suban
+Assets/Samples/
+# Editores y SO
+.vscode/
+.idea/
+.DS_Store
+
+# (Opcional) Si alguna vez importaste el SDK clásico en Assets/
+Assets/Vuforia/
