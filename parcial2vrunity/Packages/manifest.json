@@ -1,16 +1,4 @@
 {
-  {
-    "scopedRegistries": [
-      {
-        "name": "Vuforia",
-        "url": "https://registry.packages.developer.vuforia.com",
-        "scopes": [ "com.ptc.vuforia" ]
-      }
-    ],
-    "dependencies": {
-      "com.ptc.vuforia.engine": "10.26.0"
-    }
-  }
   "dependencies": {
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
