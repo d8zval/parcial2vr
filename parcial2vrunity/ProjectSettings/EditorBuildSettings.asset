@@ -5,8 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/SamplesResources/Scenes/0-Main.unity
     guid: a09cb257d566c489595b16ab37547666
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/valen.unity
+    guid: c62239b654b03474ba060b8d8d9f5adf
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 237c1e50893faf242b405c121e8d207a,
+      type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: bc5f0cd62699f1344b99f44880aba24d,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 00542621134c2bd48900d27941a28657,
+      type: 2}
   m_UseUCBPForAssetBundles: 0
