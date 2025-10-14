@@ -8,10 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SamplesResources/Scenes/0-Main.unity
     guid: a09cb257d566c489595b16ab37547666
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FiltrosEscena.unity
     guid: c62239b654b03474ba060b8d8d9f5adf
+  - enabled: 1
+    path: Assets/Scenes/1970.unity
+    guid: 2bdefd49e79713a4cba5cce80dee5e29
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 88fea0c4096aaa44ebd25136745f2240,
+      type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 237c1e50893faf242b405c121e8d207a,
       type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: bc5f0cd62699f1344b99f44880aba24d,
