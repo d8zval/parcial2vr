@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 624152167}
   - component: {fileID: 624152166}
   - component: {fileID: 624152165}
+  - component: {fileID: 624152170}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -329,7 +330,7 @@ MonoBehaviour:
       m_Calls: []
   m_PlanePrefab: {fileID: 4794252523865353896, guid: 80161b4ca44a60e489ecf4d78dd2c29b,
     type: 3}
-  m_DetectionMode: -1
+  m_DetectionMode: 1
 --- !u!114 &624152167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +344,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneManager
   arPlaneManager: {fileID: 624152166}
-  model3DPrefab: {fileID: 0}
+  arRaycastManager: {fileID: 624152165}
+  model3DPrefab: {fileID: 1020106609883103216, guid: 06e19c8eaeed04f48b1d66f328ffbf0d,
+    type: 3}
+  arCamera: {fileID: 670930078}
+  distancia: 0.8
 --- !u!114 &624152168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +382,23 @@ Transform:
   - {fileID: 1732096487}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &624152170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624152164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59dee910335bf924ab21463f4db3b7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PanelRaycastController
+  mainCamera: {fileID: 670930078}
+  maxDistance: 10
+  panelLayer:
+    serializedVersion: 2
+    m_Bits: 1073741832
 --- !u!1 &670930072
 GameObject:
   m_ObjectHideFlags: 0
