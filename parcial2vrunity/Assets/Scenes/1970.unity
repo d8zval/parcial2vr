@@ -4940,7 +4940,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.4425, y: 2.4425, z: 2.4425}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 876448943}
@@ -30703,7 +30703,7 @@ MonoBehaviour:
   m_Script: {fileID: 2020821747, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ContentPositioningBehaviour
-  AnchorStage: {fileID: 256518524}
+  AnchorStage: {fileID: 0}
   DuplicateStage: 1
   OnContentPlaced:
     m_PersistentCalls:
@@ -33027,22 +33027,22 @@ PrefabInstance:
     - target: {fileID: 6674312909598486703, guid: 2a1b5a0fbefc79f42adb60f4975976f9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.117019445
+      value: 0.40941656
       objectReference: {fileID: 0}
     - target: {fileID: 6674312909598486703, guid: 2a1b5a0fbefc79f42adb60f4975976f9,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.117019445
+      value: 0.40941656
       objectReference: {fileID: 0}
     - target: {fileID: 6674312909598486703, guid: 2a1b5a0fbefc79f42adb60f4975976f9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.117019445
+      value: 0.40941656
       objectReference: {fileID: 0}
     - target: {fileID: 6674312909598486703, guid: 2a1b5a0fbefc79f42adb60f4975976f9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.22
+      value: -1.3961105
       objectReference: {fileID: 0}
     - target: {fileID: 6674312909598486703, guid: 2a1b5a0fbefc79f42adb60f4975976f9,
         type: 3}
@@ -33052,7 +33052,7 @@ PrefabInstance:
     - target: {fileID: 6674312909598486703, guid: 2a1b5a0fbefc79f42adb60f4975976f9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.49
+      value: 6.137154
       objectReference: {fileID: 0}
     - target: {fileID: 6674312909598486703, guid: 2a1b5a0fbefc79f42adb60f4975976f9,
         type: 3}
