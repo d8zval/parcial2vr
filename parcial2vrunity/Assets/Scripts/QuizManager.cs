@@ -44,14 +44,31 @@ public class QuizManager : MonoBehaviour
     public RawImage vidas0;
 
     [Header("Estrella de progreso (una punta por módulo)")]
-    public GameObject estrellaContenedor; //Contenedor de la estrella completa
-    public GameObject[] puntasEstrella;   //Cada punta corresponde a un módulo
-    public Button botonContinuarFinal;    //Botón que aparece cuando la estrella está completa
-    public Transform posicionFinalEstrella; //Punto donde la estrella debe moverse (Transform vacío en la escena)
+    public GameObject estrellaContenedor;
+    public GameObject[] puntasEstrella;
+    public Button botonContinuarFinal;
+    public Transform posicionFinalEstrella;
 
     [Header("Datos del Quiz")]
     public Modulo[] modulos = new Modulo[5];
-    public GameObject[] modulosVisuales;  //Sprites o paneles visuales de cada módulo
+    public GameObject[] modulosVisuales;
+
+    [Header("Audio Clips")]
+    public AudioSource audioSourceEfectos;       // Para efectos de sonido
+    public AudioSource audioSourceMusicaFondo;   // Para la música de fondo
+
+    [Space(10)]
+    public AudioClip sonidoBoton;                // Cada vez que se presiona un botón
+    public AudioClip sonidoVidaPerdida;          // Cuando pierde una vida
+    public AudioClip sonidoRespuestaCorrecta;    // Cuando responde bien
+    public AudioClip sonidoPanelReintentar;      // Cuando aparece panel de reintentar
+    public AudioClip sonidoPanelFelicitaciones;  // Cuando aparece panel de felicitaciones
+    public AudioClip sonidoAceptarReintentar;    // Botón aceptar en reintentar
+    public AudioClip sonidoAceptarFelicitaciones;// Botón aceptar en felicitaciones
+    public AudioClip sonidoEstrellaParte;        // Cuando se activa una parte de estrella
+    public AudioClip sonidoEstrellaCompleta;     // Cuando la estrella se completa
+    public AudioClip sonidoAnimacionEstrella;    // Durante animación final
+    public AudioClip musicaDeFondo;              // Música del quiz
 
     private int moduloActual = 0;
     private int indicePreguntaActual = 0;
@@ -60,6 +77,13 @@ public class QuizManager : MonoBehaviour
 
     void Start()
     {
+        // Iniciar música de fondo si existe
+        if (audioSourceMusicaFondo != null && musicaDeFondo != null)
+        {
+            audioSourceMusicaFondo.clip = musicaDeFondo;
+            audioSourceMusicaFondo.loop = true;
+        }
+
         panelQuiz.SetActive(false);
         panelModulos.SetActive(true);
         panelReintentar.SetActive(false);
@@ -71,14 +95,30 @@ public class QuizManager : MonoBehaviour
         ActualizarEstrella();
 
         // Asignar botones
-        botonAceptarReintentar.onClick.AddListener(VolverAModulos);
-        botonAceptarFelicitaciones.onClick.AddListener(VolverAModulos);
-        botonAceptarCompletado.onClick.AddListener(VolverAModulos);
-        botonContinuarFinal.onClick.AddListener(IrAEscenaFinal);
+        botonAceptarReintentar.onClick.AddListener(() => {
+            ReproducirSonido(sonidoAceptarReintentar);
+            VolverAModulos();
+        });
+
+        botonAceptarFelicitaciones.onClick.AddListener(() => {
+            ReproducirSonido(sonidoAceptarFelicitaciones);
+            VolverAModulos();
+        });
+
+        botonAceptarCompletado.onClick.AddListener(() => {
+            ReproducirSonido(sonidoBoton);
+            VolverAModulos();
+        });
+
+        botonContinuarFinal.onClick.AddListener(() => {
+            ReproducirSonido(sonidoBoton);
+            IrAEscenaFinal();
+        });
     }
 
     public void SeleccionarModulo(int moduloIndex)
     {
+        audioSourceMusicaFondo.Play();
         moduloActual = moduloIndex;
         indicePreguntaActual = 0;
         vidasActuales = 3;
@@ -104,7 +144,11 @@ public class QuizManager : MonoBehaviour
             int index = i;
             botonesOpciones[i].GetComponentInChildren<TextMeshProUGUI>().text = p.opciones[i];
             botonesOpciones[i].onClick.RemoveAllListeners();
-            botonesOpciones[i].onClick.AddListener(() => VerificarRespuesta(index));
+            botonesOpciones[i].onClick.AddListener(() =>
+            {
+                ReproducirSonido(sonidoBoton);
+                VerificarRespuesta(index);
+            });
         }
     }
 
@@ -118,6 +162,7 @@ public class QuizManager : MonoBehaviour
         {
             seEquivocoEnModulo = true;
             vidasActuales--;
+            ReproducirSonido(sonidoVidaPerdida);
             ActualizarVidasUI();
 
             if (vidasActuales <= 0)
@@ -126,11 +171,11 @@ public class QuizManager : MonoBehaviour
                 return;
             }
 
-            // Reintentar la misma pregunta
             MostrarPregunta();
             return;
         }
 
+        ReproducirSonido(sonidoRespuestaCorrecta);
         indicePreguntaActual++;
         if (indicePreguntaActual < modulos[moduloActual].preguntas.Length)
         {
@@ -150,34 +195,29 @@ public class QuizManager : MonoBehaviour
         // 🔹 Si completó perfecto
         if (!seEquivocoEnModulo && vidasActuales == 3)
         {
-            // Asegurarse de que la estrella esté activa para poder mostrar la punta
             if (estrellaContenedor != null && !estrellaContenedor.activeSelf)
-            {
                 estrellaContenedor.SetActive(true);
-                Debug.Log("Activando contenedor de estrella automáticamente.");
-            }
 
             ActivarPuntaDeModulo(moduloActual);
             panelFelicitaciones.SetActive(true);
+            ReproducirSonido(sonidoPanelFelicitaciones);
         }
         else if (vidasActuales > 0)
         {
-            // Completado con errores
             panelCompletadoConErrores.SetActive(true);
         }
         else
         {
-            // Perdió todas las vidas
             MostrarPanelReintentar();
         }
 
-        // Si la estrella ya está completa, ejecutar animación final
+        // Si la estrella ya está completa
         if (EstrellaCompleta())
         {
+            ReproducirSonido(sonidoEstrellaCompleta);
             StartCoroutine(MostrarTransicionFinal());
         }
     }
-
 
     void ActualizarVidasUI()
     {
@@ -191,6 +231,7 @@ public class QuizManager : MonoBehaviour
     {
         panelQuiz.SetActive(false);
         panelReintentar.SetActive(true);
+        ReproducirSonido(sonidoPanelReintentar);
     }
 
     void VolverAModulos()
@@ -202,13 +243,14 @@ public class QuizManager : MonoBehaviour
         panelModulos.SetActive(true);
     }
 
-    // ---------- LÓGICA DE ESTRELLA POR MÓDULO ----------
+    // ---------- LÓGICA DE ESTRELLA ----------
     void ActivarPuntaDeModulo(int index)
     {
         if (puntasEstrella == null || index >= puntasEstrella.Length)
             return;
 
         puntasEstrella[index].SetActive(true);
+        ReproducirSonido(sonidoEstrellaParte);
         Debug.Log($"Punta del módulo {index + 1} activada.");
     }
 
@@ -231,15 +273,13 @@ public class QuizManager : MonoBehaviour
     IEnumerator MostrarTransicionFinal()
     {
         Debug.Log("Estrella completa, iniciando transición final...");
+        ReproducirSonido(sonidoAnimacionEstrella);
 
-        // Desaparecer módulos visuales
         foreach (GameObject mod in modulosVisuales)
             mod.SetActive(false);
 
-        // Espera breve antes de mover la estrella
         yield return new WaitForSeconds(0.8f);
 
-        // Mover suavemente la estrella hacia la posición final
         Vector3 startPos = estrellaContenedor.transform.position;
         Vector3 targetPos = posicionFinalEstrella.position;
         float t = 0;
@@ -252,7 +292,6 @@ public class QuizManager : MonoBehaviour
             yield return null;
         }
 
-        // Espera y luego mostrar botón final
         yield return new WaitForSeconds(0.5f);
         botonContinuarFinal.gameObject.SetActive(true);
         Debug.Log("Transición final completada.");
@@ -261,6 +300,13 @@ public class QuizManager : MonoBehaviour
     void IrAEscenaFinal()
     {
         Debug.Log("Cargando escena final...");
-        SceneManager.LoadScene("FiltrosEscena"); //Cambia por el nombre real de tu escena
+        SceneManager.LoadScene("FiltrosEscena");
+    }
+
+    // ---------- FUNCIONES DE AUDIO ----------
+    void ReproducirSonido(AudioClip clip)
+    {
+        if (audioSourceEfectos != null && clip != null)
+            audioSourceEfectos.PlayOneShot(clip);
     }
 }

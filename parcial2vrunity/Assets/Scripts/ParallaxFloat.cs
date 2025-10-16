@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ParallaxFloat : MonoBehaviour
 {
-    public float intensidad = 0.05f;
+    public float intensidad = 0.5f;
     public float suavizado = 5f;
     [HideInInspector] public bool parallaxActivo = false;
 

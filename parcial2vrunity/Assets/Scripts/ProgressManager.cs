@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ProgressManager : MonoBehaviour
@@ -12,6 +12,7 @@ public class ProgressManager : MonoBehaviour
         public int totalPlates;
         [HideInInspector] public int platesActivated;
         public Image progressImage; // en vez del Slider
+        public MenuButtonSpriteLogic botonModulo; // 🔹 botón que se desbloquea al completar
     }
 
     public ModuleProgress[] modules;
@@ -28,7 +29,8 @@ public class ProgressManager : MonoBehaviour
             return;
 
         ModuleProgress module = modules[moduleID];
-        module.platesActivated++;
+
+        module.platesActivated = Mathf.Min(module.platesActivated + 1, module.totalPlates);
 
         float progress = (float)module.platesActivated / module.totalPlates;
 
@@ -36,5 +38,12 @@ public class ProgressManager : MonoBehaviour
             module.progressImage.fillAmount = progress;
 
         Debug.Log($"Progreso en {module.moduleName}: {progress * 100f}%");
+
+        // 🔹 Cuando el progreso llegue a 100%, desbloquear el botón
+        if (progress >= 1f && module.botonModulo != null && !module.botonModulo.estaDesbloqueado)
+        {
+            module.botonModulo.Desbloquear();
+            Debug.Log($"Módulo '{module.moduleName}' completado. Botón desbloqueado.");
+        }
     }
 }
