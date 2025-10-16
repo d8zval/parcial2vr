@@ -12,14 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/1970.unity
     guid: 2bdefd49e79713a4cba5cce80dee5e29
   - enabled: 0
-    path: Assets/Scenes/FiltrosEscena.unity
-    guid: c62239b654b03474ba060b8d8d9f5adf
-  - enabled: 0
     path: Assets/Scenes/Planos.unity
     guid: 2e5e71f8aa3460a44a73bfdc3bab2230
   - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: baad37e0c5b0ca349b62e53506b7f29f
+  - enabled: 1
     path: Assets/Scenes/QuizValen.unity
     guid: 4f5923986e8adc14499dafb1984d5edf
+  - enabled: 1
+    path: Assets/Scenes/FiltrosEscena.unity
+    guid: c62239b654b03474ba060b8d8d9f5adf
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 88fea0c4096aaa44ebd25136745f2240,
       type: 2}
