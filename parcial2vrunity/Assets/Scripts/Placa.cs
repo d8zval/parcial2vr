@@ -16,16 +16,17 @@ public class Placa : MonoBehaviour
             rend.material = defaultMaterial;
     }
 
-    void OnTriggerEnter(Collider other)
+    public void Activar()
     {
-        // Detecta si el objeto que pasa es la cámara del usuario
-        if (other.CompareTag("MainCamera") && !activated)
-        {
-            activated = true;
+        if (activated) return;
+
+        activated = true;
+        if (rend != null && activatedMaterial != null)
             rend.material = activatedMaterial;
 
-            // Notifica al administrador de progreso
-            ProgressManager.Instance.UpdateProgress(moduleID);
-        }
+        // Notifica al administrador de progreso
+        ProgressManager.Instance.UpdateProgress(moduleID);
+
+        Debug.Log($"Placa {name} activada");
     }
 }

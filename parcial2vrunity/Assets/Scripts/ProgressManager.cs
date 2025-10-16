@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class ProgressManager : MonoBehaviour
 {
     public static ProgressManager Instance;
@@ -12,7 +11,7 @@ public class ProgressManager : MonoBehaviour
         public string moduleName;
         public int totalPlates;
         [HideInInspector] public int platesActivated;
-        public Slider progressBar; // o Image si usas fillAmount
+        public Image progressImage; // en vez del Slider
     }
 
     public ModuleProgress[] modules;
@@ -32,8 +31,9 @@ public class ProgressManager : MonoBehaviour
         module.platesActivated++;
 
         float progress = (float)module.platesActivated / module.totalPlates;
-        if (module.progressBar != null)
-            module.progressBar.value = progress;
+
+        if (module.progressImage != null)
+            module.progressImage.fillAmount = progress;
 
         Debug.Log($"Progreso en {module.moduleName}: {progress * 100f}%");
     }
