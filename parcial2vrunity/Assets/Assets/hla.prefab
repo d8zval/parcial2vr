@@ -137,6 +137,8 @@ MonoBehaviour:
   moduleID: 3
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &70093849145223480
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +276,8 @@ MonoBehaviour:
   moduleID: 4
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &192958024051609752
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +415,8 @@ MonoBehaviour:
   moduleID: 3
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &205406463283977771
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +808,8 @@ MonoBehaviour:
   moduleID: 4
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &345301652185981464
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,6 +937,8 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &576060157123360797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1076,8 @@ MonoBehaviour:
   moduleID: 3
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &642223406101119238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,6 +1215,8 @@ MonoBehaviour:
   moduleID: 2
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &760771916140824321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1354,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &1084371921649082943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,6 +1493,8 @@ MonoBehaviour:
   moduleID: 3
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &1300111867535319188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1632,8 @@ MonoBehaviour:
   moduleID: 4
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &1563703154029149676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,6 +1888,137 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
+--- !u!1 &2240526892952129786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610637393419293045}
+  - component: {fileID: 8754457036357522271}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &610637393419293045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2240526892952129786}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.29782, y: 15.37949, z: 12.78247}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6760111919376123948}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &8754457036357522271
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2240526892952129786}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2738278001349575694
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,6 +2156,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &2834036504910145491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2295,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &3014699500629806938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,6 +2434,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &3094914658862560827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,6 +2573,8 @@ MonoBehaviour:
   moduleID: 2
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &3120022775066016454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,6 +2712,8 @@ MonoBehaviour:
   moduleID: 2
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &3153209103515758395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2851,8 @@ MonoBehaviour:
   moduleID: 4
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &3261757903109589924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,6 +2990,8 @@ MonoBehaviour:
   moduleID: 4
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &3287294859649974133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,6 +3256,8 @@ MonoBehaviour:
   moduleID: 2
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &3559678504947445888
 GameObject:
   m_ObjectHideFlags: 0
@@ -3228,6 +3395,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &3686715871726946352
 GameObject:
   m_ObjectHideFlags: 0
@@ -3355,6 +3524,8 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &3720211547708704304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3492,6 +3663,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &4007272723094148753
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,6 +3802,8 @@ MonoBehaviour:
   moduleID: 2
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &4617530693990447629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,6 +3941,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &4642736072609508931
 GameObject:
   m_ObjectHideFlags: 0
@@ -4020,6 +4197,8 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &4764571585675721723
 GameObject:
   m_ObjectHideFlags: 0
@@ -4147,6 +4326,8 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &4905285954453382911
 GameObject:
   m_ObjectHideFlags: 0
@@ -4284,6 +4465,8 @@ MonoBehaviour:
   moduleID: 2
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &4924479555743507779
 GameObject:
   m_ObjectHideFlags: 0
@@ -4421,6 +4604,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &4941071485562648354
 GameObject:
   m_ObjectHideFlags: 0
@@ -4558,6 +4743,8 @@ MonoBehaviour:
   moduleID: 4
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &5002773292296220468
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,6 +4882,8 @@ MonoBehaviour:
   moduleID: 2
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &5087587955052179052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4822,6 +5011,8 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &5108141531434191149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4959,6 +5150,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &5235503188342959801
 GameObject:
   m_ObjectHideFlags: 0
@@ -5096,6 +5289,8 @@ MonoBehaviour:
   moduleID: 4
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &5259747152133129828
 GameObject:
   m_ObjectHideFlags: 0
@@ -5233,6 +5428,8 @@ MonoBehaviour:
   moduleID: 4
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &5396398268085680614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5370,6 +5567,8 @@ MonoBehaviour:
   moduleID: 2
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &5858995298942128327
 GameObject:
   m_ObjectHideFlags: 0
@@ -5507,6 +5706,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &5922866748316489758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5771,6 +5972,8 @@ MonoBehaviour:
   moduleID: 0
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &5968366528430582397
 GameObject:
   m_ObjectHideFlags: 0
@@ -6279,6 +6482,8 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &6594217193967470947
 GameObject:
   m_ObjectHideFlags: 0
@@ -6670,6 +6875,8 @@ MonoBehaviour:
   moduleID: 2
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &6840199325035914637
 GameObject:
   m_ObjectHideFlags: 0
@@ -6807,6 +7014,8 @@ MonoBehaviour:
   moduleID: 3
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &6852867032087645777
 GameObject:
   m_ObjectHideFlags: 0
@@ -6934,6 +7143,8 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &6894392123486715947
 GameObject:
   m_ObjectHideFlags: 0
@@ -7198,6 +7409,8 @@ MonoBehaviour:
   moduleID: 3
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &7394113010332540534
 GameObject:
   m_ObjectHideFlags: 0
@@ -7325,6 +7538,8 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &7451924495622183389
 GameObject:
   m_ObjectHideFlags: 0
@@ -7452,6 +7667,8 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &7657293649946137811
 GameObject:
   m_ObjectHideFlags: 0
@@ -7589,6 +7806,8 @@ MonoBehaviour:
   moduleID: 3
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &7838905614640436578
 GameObject:
   m_ObjectHideFlags: 0
@@ -7726,6 +7945,8 @@ MonoBehaviour:
   moduleID: 4
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &7954866063526539892
 GameObject:
   m_ObjectHideFlags: 0
@@ -7885,6 +8106,7 @@ Transform:
   - {fileID: 2057212684262937662}
   - {fileID: 3135124689386679770}
   - {fileID: 1349602033153106197}
+  - {fileID: 610637393419293045}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8557150391011129672
@@ -8014,6 +8236,8 @@ MonoBehaviour:
   moduleID: 1
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &8562315123960464306
 GameObject:
   m_ObjectHideFlags: 0
@@ -8151,6 +8375,8 @@ MonoBehaviour:
   moduleID: 3
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &8769732997956351196
 GameObject:
   m_ObjectHideFlags: 0
@@ -8288,6 +8514,8 @@ MonoBehaviour:
   moduleID: 2
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &9082134264308903950
 GameObject:
   m_ObjectHideFlags: 0
@@ -8552,6 +8780,8 @@ MonoBehaviour:
   moduleID: 4
   defaultMaterial: {fileID: 2100000, guid: 142f49f6171eb134d946156d08e8a953, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+  sonidoActivacion: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+  volumen: 1
 --- !u!1 &9110033956962260280
 GameObject:
   m_ObjectHideFlags: 0
@@ -8717,6 +8947,11 @@ PrefabInstance:
       propertyPath: moduleID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1008198718302615414, guid: ec6925ecdf57769448486ce5597c9898,
+        type: 3}
+      propertyPath: sonidoActivacion
+      value: 
+      objectReference: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
     - target: {fileID: 1252662704243220538, guid: ec6925ecdf57769448486ce5597c9898,
         type: 3}
       propertyPath: m_Intensity
@@ -8832,6 +9067,11 @@ PrefabInstance:
       propertyPath: moduleID
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3109092118871669881, guid: ec6925ecdf57769448486ce5597c9898,
+        type: 3}
+      propertyPath: sonidoActivacion
+      value: 
+      objectReference: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
     - target: {fileID: 3666970760444293378, guid: ec6925ecdf57769448486ce5597c9898,
         type: 3}
       propertyPath: m_Intensity
@@ -8882,6 +9122,11 @@ PrefabInstance:
       propertyPath: moduleID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6298349838656088665, guid: ec6925ecdf57769448486ce5597c9898,
+        type: 3}
+      propertyPath: sonidoActivacion
+      value: 
+      objectReference: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
     - target: {fileID: 7178822577825046390, guid: ec6925ecdf57769448486ce5597c9898,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -8902,6 +9147,16 @@ PrefabInstance:
       propertyPath: moduleID
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7197390988010595480, guid: ec6925ecdf57769448486ce5597c9898,
+        type: 3}
+      propertyPath: sonidoActivacion
+      value: 
+      objectReference: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
+    - target: {fileID: 7676568905315630614, guid: ec6925ecdf57769448486ce5597c9898,
+        type: 3}
+      propertyPath: sonidoActivacion
+      value: 
+      objectReference: {fileID: 8300000, guid: 376247864a34b78499a1cceb366fe172, type: 3}
     - target: {fileID: 7717578016733455545, guid: ec6925ecdf57769448486ce5597c9898,
         type: 3}
       propertyPath: m_Intensity
