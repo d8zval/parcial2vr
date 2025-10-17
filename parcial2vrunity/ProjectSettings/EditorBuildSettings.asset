@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Convai/ConvaiAR/Scenes/Convai Demo - AR.unity
     guid: d23e25ca551aacf4c80e8a01703e8490
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/QuizValen.unity
     guid: 4f5923986e8adc14499dafb1984d5edf
   - enabled: 1
