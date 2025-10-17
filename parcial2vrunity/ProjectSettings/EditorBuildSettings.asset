@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Convai/ConvaiAR/Scenes/Convai Demo - AR.unity
     guid: d23e25ca551aacf4c80e8a01703e8490
+  - enabled: 1
+    path: Assets/Scenes/QuizValen.unity
+    guid: 4f5923986e8adc14499dafb1984d5edf
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 88fea0c4096aaa44ebd25136745f2240,
       type: 2}
