@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6101596584426374051}
   - component: {fileID: 3523307219831067365}
-  - component: {fileID: 5330233751623624754}
   m_Layer: 0
   m_Name: Spot
   m_TagString: Untagged
@@ -54,19 +53,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5330233751623624754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100314431641649890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &1244522864349146690
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,7 +63,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4730966080374729854}
   - component: {fileID: 1491335337635016543}
-  - component: {fileID: 2722742397962969146}
   m_Layer: 0
   m_Name: Spot (2)
   m_TagString: Untagged
@@ -121,19 +106,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2722742397962969146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244522864349146690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &1861504952299450080
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +116,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2481001538735220342}
   - component: {fileID: 4473562714882706900}
-  - component: {fileID: 1050517530492759017}
   m_Layer: 0
   m_Name: Spot (5)
   m_TagString: Untagged
@@ -188,19 +159,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1050517530492759017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861504952299450080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &1983157064587864696
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +169,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2112134286232988503}
   - component: {fileID: 848391301643104697}
-  - component: {fileID: 6401209831681717463}
   m_Layer: 0
   m_Name: Spot (3)
   m_TagString: Untagged
@@ -255,19 +212,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6401209831681717463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983157064587864696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &3413007024008611949
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +222,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1776339494414386047}
   - component: {fileID: 8966166271155700591}
-  - component: {fileID: 7062709623088184307}
   m_Layer: 0
   m_Name: Spot (4)
   m_TagString: Untagged
@@ -322,19 +265,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7062709623088184307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3413007024008611949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &4039990359355719785
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +275,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3955978251455227425}
   - component: {fileID: 6118640618432288349}
-  - component: {fileID: 5237408547873649496}
   m_Layer: 0
   m_Name: Spot (7)
   m_TagString: Untagged
@@ -389,19 +318,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5237408547873649496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4039990359355719785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &4242181337039356993
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +328,6 @@ GameObject:
   m_Component:
   - component: {fileID: 383276229621714926}
   - component: {fileID: 8373877961985845676}
-  - component: {fileID: 8236924692475137694}
   m_Layer: 0
   m_Name: Spot (10)
   m_TagString: Untagged
@@ -456,19 +371,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8236924692475137694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4242181337039356993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &4355949727613591556
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +381,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5111561650573384538}
   - component: {fileID: 6386759807192755252}
-  - component: {fileID: 4030482421644786565}
   m_Layer: 0
   m_Name: Spot (6)
   m_TagString: Untagged
@@ -523,19 +424,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4030482421644786565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4355949727613591556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &5869722397381714477
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +434,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1072156729537828509}
   - component: {fileID: 4062821347175505962}
-  - component: {fileID: 7771501961348186778}
   m_Layer: 0
   m_Name: Spot (11)
   m_TagString: Untagged
@@ -590,19 +477,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7771501961348186778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5869722397381714477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &6180810112677989932
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +487,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1157793128607364461}
   - component: {fileID: 9157751048990033061}
-  - component: {fileID: 3044463264645629431}
   m_Layer: 0
   m_Name: Spot (8)
   m_TagString: Untagged
@@ -657,19 +530,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3044463264645629431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6180810112677989932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &6446869984702062183
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +540,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6094969555481423659}
   - component: {fileID: 2191951050978914760}
-  - component: {fileID: 7027185236398357453}
   m_Layer: 0
   m_Name: Spot (1)
   m_TagString: Untagged
@@ -724,19 +583,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7027185236398357453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6446869984702062183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &6756838454201733986
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +636,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5226165459568093594}
   - component: {fileID: 3623672030443518633}
-  - component: {fileID: 5541930727399771860}
   m_Layer: 0
   m_Name: Spot (9)
   m_TagString: Untagged
@@ -834,19 +679,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5541930727399771860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7364789958266392505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1001 &4148257597856209332
 PrefabInstance:
   m_ObjectHideFlags: 0
