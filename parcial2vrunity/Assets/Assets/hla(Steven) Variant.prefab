@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &1244522864349146690
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &1861504952299450080
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &1983157064587864696
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &3413007024008611949
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &4039990359355719785
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &4242181337039356993
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &4355949727613591556
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &5869722397381714477
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &6180810112677989932
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &6446869984702062183
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1 &6756838454201733986
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6620218584d2d40974a01eb0c1e6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpotTriggerController
-  boton: {fileID: 6631222003866101748, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
+  boton: {fileID: 5787965823602827860, guid: d0f44a324df73814f8b6119abbac30b5, type: 3}
 --- !u!1001 &4148257597856209332
 PrefabInstance:
   m_ObjectHideFlags: 0
