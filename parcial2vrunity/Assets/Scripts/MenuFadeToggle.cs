@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuFadeToggle : MonoBehaviour
 {
@@ -53,7 +54,7 @@ public class MenuFadeToggle : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("⚠️ Falta asignar el AudioSource o el sonido en MenuFadeToggle.");
+            Debug.LogWarning("Falta asignar el AudioSource o el sonido en MenuFadeToggle.");
         }
     }
 }
