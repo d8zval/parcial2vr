@@ -1261,6 +1261,67 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5176696263760832733}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1009831691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1009831694}
+  - component: {fileID: 1009831693}
+  - component: {fileID: 1009831692}
+  m_Layer: 0
+  m_Name: ConvaiGRPCAPI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1009831692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009831691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac3bfdb7f1f556540bc41acc9a375817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Convai.Scripts.Runtime.Core.ConvaiGRPCAPI
+--- !u!114 &1009831693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009831691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5777a8a41e942f5a05df965241ef598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Convai.Scripts.Runtime.Core.ConvaiNPCManager
+  rayLength: 5
+  visionConeAngle: 90
+  activeConvaiNPC: {fileID: 0}
+  nearbyNPC: {fileID: 0}
+--- !u!4 &1009831694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009831691}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1013.80664, y: 145.3477, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1025928320 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7243935451612180457, guid: 96457da149e7a474398c0d8601563e7e,
@@ -2652,3 +2713,4 @@ SceneRoots:
   - {fileID: 36760023}
   - {fileID: 184170459}
   - {fileID: 337589530}
+  - {fileID: 1009831694}
