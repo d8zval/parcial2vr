@@ -53,22 +53,29 @@ public class QuizManager : MonoBehaviour
     public Modulo[] modulos = new Modulo[5];
     public GameObject[] modulosVisuales;
 
+    [Header("Estado de módulos completados")]
+    private bool[] modulosCompletados; // Guarda si cada módulo fue completado perfectamente
+
+    [Header("Imágenes de módulos completados")]
+    public GameObject[] iconosEstrellaModulo; // Imagen o ícono con estrellita debajo del módulo
+    public AudioClip sonidoBloqueado; // Sonido cuando se intenta entrar a un módulo bloqueado
+
     [Header("Audio Clips")]
     public AudioSource audioSourceEfectos;       // Para efectos de sonido
     public AudioSource audioSourceMusicaFondo;   // Para la música de fondo
 
     [Space(10)]
-    public AudioClip sonidoBoton;                // Cada vez que se presiona un botón
-    public AudioClip sonidoVidaPerdida;          // Cuando pierde una vida
-    public AudioClip sonidoRespuestaCorrecta;    // Cuando responde bien
-    public AudioClip sonidoPanelReintentar;      // Cuando aparece panel de reintentar
-    public AudioClip sonidoPanelFelicitaciones;  // Cuando aparece panel de felicitaciones
-    public AudioClip sonidoAceptarReintentar;    // Botón aceptar en reintentar
-    public AudioClip sonidoAceptarFelicitaciones;// Botón aceptar en felicitaciones
-    public AudioClip sonidoEstrellaParte;        // Cuando se activa una parte de estrella
-    public AudioClip sonidoEstrellaCompleta;     // Cuando la estrella se completa
-    public AudioClip sonidoAnimacionEstrella;    // Durante animación final
-    public AudioClip musicaDeFondo;              // Música del quiz
+    public AudioClip sonidoBoton;
+    public AudioClip sonidoVidaPerdida;
+    public AudioClip sonidoRespuestaCorrecta;
+    public AudioClip sonidoPanelReintentar;
+    public AudioClip sonidoPanelFelicitaciones;
+    public AudioClip sonidoAceptarReintentar;
+    public AudioClip sonidoAceptarFelicitaciones;
+    public AudioClip sonidoEstrellaParte;
+    public AudioClip sonidoEstrellaCompleta;
+    public AudioClip sonidoAnimacionEstrella;
+    public AudioClip musicaDeFondo;
 
     private int moduloActual = 0;
     private int indicePreguntaActual = 0;
@@ -90,6 +97,14 @@ public class QuizManager : MonoBehaviour
         panelFelicitaciones.SetActive(false);
         panelCompletadoConErrores.SetActive(false);
         botonContinuarFinal.gameObject.SetActive(false);
+
+        // Inicializar estados de módulos
+        modulosCompletados = new bool[modulos.Length];
+        for (int i = 0; i < iconosEstrellaModulo.Length; i++)
+        {
+            if (iconosEstrellaModulo[i] != null)
+                iconosEstrellaModulo[i].SetActive(false);
+        }
 
         ActualizarVidasUI();
         ActualizarEstrella();
@@ -118,6 +133,14 @@ public class QuizManager : MonoBehaviour
 
     public void SeleccionarModulo(int moduloIndex)
     {
+        // Si el módulo ya está completado perfecto, no permitir reingresar
+        if (modulosCompletados != null && modulosCompletados[moduloIndex])
+        {
+            ReproducirSonido(sonidoBloqueado);
+            Debug.Log($"El módulo {moduloIndex + 1} está bloqueado (ya completado).");
+            return;
+        }
+
         audioSourceMusicaFondo.Play();
         moduloActual = moduloIndex;
         indicePreguntaActual = 0;
@@ -192,7 +215,7 @@ public class QuizManager : MonoBehaviour
         Debug.Log($"Fin del módulo: {modulos[moduloActual].nombreModulo}");
         panelQuiz.SetActive(false);
 
-        // 🔹 Si completó perfecto
+        //  Si completó perfecto
         if (!seEquivocoEnModulo && vidasActuales == 3)
         {
             if (estrellaContenedor != null && !estrellaContenedor.activeSelf)
@@ -201,6 +224,14 @@ public class QuizManager : MonoBehaviour
             ActivarPuntaDeModulo(moduloActual);
             panelFelicitaciones.SetActive(true);
             ReproducirSonido(sonidoPanelFelicitaciones);
+
+            // 🔒 Marcar como completado y activar ícono
+            modulosCompletados[moduloActual] = true;
+
+            if (iconosEstrellaModulo != null && moduloActual < iconosEstrellaModulo.Length && iconosEstrellaModulo[moduloActual] != null)
+            {
+                iconosEstrellaModulo[moduloActual].SetActive(true);
+            }
         }
         else if (vidasActuales > 0)
         {
@@ -269,7 +300,7 @@ public class QuizManager : MonoBehaviour
         return true;
     }
 
-    // 🌟 ---------- ANIMACIÓN FINAL ----------
+    // ---------- ANIMACIÓN FINAL ----------
     IEnumerator MostrarTransicionFinal()
     {
         Debug.Log("Estrella completa, iniciando transición final...");
