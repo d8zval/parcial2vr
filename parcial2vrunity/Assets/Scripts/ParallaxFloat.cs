@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ParallaxFloat : MonoBehaviour
 {
-    public float intensidad = 1.5f;
-    public float suavizado = 5f;
+    private float intensidad = 0.085f;
+    private float suavizado = 5f;
     [HideInInspector] public bool parallaxActivo = false;
 
     private Vector3 posicionInicial;
