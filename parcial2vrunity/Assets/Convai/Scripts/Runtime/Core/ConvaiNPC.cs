@@ -279,6 +279,16 @@ namespace Convai.Scripts.Runtime.Core
             InitializePlayerInteractionManager();
             InitializeLipSync();
             StartCoroutine(InitializeActionsHandler());
+
+            if (_convaiChatUIHandler == null)
+            {
+                Debug.LogError("ConvaiChatUIHandler no encontrado en la escena.");
+            }
+
+            if (_convaiCrosshairHandler == null)
+            {
+                Debug.LogError("ConvaiCrosshairHandler no encontrado en la escena.");
+            }
         }
 
 

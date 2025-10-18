@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Convai.Scripts.Runtime.UI
 {
-    public class MicrophoneManager
+    public class MicrophoneManager:MonoBehaviour
     {
         /// <summary>
         ///     Private Instance of the Singleton
@@ -17,7 +17,17 @@ namespace Convai.Scripts.Runtime.UI
 
         private MicrophoneManager()
         {
-            _selectedMicrophoneIndex = UISaveLoadSystem.Instance.SelectedMicrophoneDeviceNumber;
+            // Verifica si UISaveLoadSystem está inicializado antes de acceder a sus propiedades
+            if (UISaveLoadSystem.Instance != null)
+            {
+                _selectedMicrophoneIndex = UISaveLoadSystem.Instance.SelectedMicrophoneDeviceNumber;
+            }
+            else
+            {
+                // Asigna un valor predeterminado o maneja el caso en que no esté inicializado
+                _selectedMicrophoneIndex = 0;
+                Debug.LogWarning("UISaveLoadSystem no está inicializado.");
+            }
         }
 
         /// <summary>

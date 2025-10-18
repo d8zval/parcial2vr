@@ -93,7 +93,7 @@ namespace Convai.Scripts.Runtime.UI
                 // _grpcAPI.InterruptCharacterSpeech();
                 _currentActiveNPC.playerInteractionManager.UpdateActionConfig();
                 _currentActiveNPC.StartListening();
-                IncreaseScale();
+               // IncreaseScale();
                 ConvaiLogger.DebugLog($"{gameObject.name} Was Clicked.", ConvaiLogger.LogCategory.Character);
             }
             else
@@ -114,7 +114,7 @@ namespace Convai.Scripts.Runtime.UI
             if (_currentActiveNPC != null)
             {
                 _currentActiveNPC.StopListening();
-                DecreaseScale();
+                //DecreaseScale();
                 ConvaiLogger.DebugLog($"{gameObject.name} Was Released.", ConvaiLogger.LogCategory.Character);
             }
             else
@@ -122,17 +122,19 @@ namespace Convai.Scripts.Runtime.UI
                 ConvaiLogger.Warn("No active NPC found when button was released.", ConvaiLogger.LogCategory.Character);
             }
         }
-
+        /*
         private void IncreaseScale()
         {
             Vector3 targetScale = new(1.25f, 1.25f, 1.25f);
             transform.localScale = Vector3.Lerp(transform.localScale, targetScale, 1f);
         }
-
+        */
+        /*
         private void DecreaseScale()
         {
             Vector3 targetScale = new(1, 1, 1);
             transform.localScale = Vector3.Lerp(transform.localScale, targetScale, 1f);
         }
+        */
     }
 }

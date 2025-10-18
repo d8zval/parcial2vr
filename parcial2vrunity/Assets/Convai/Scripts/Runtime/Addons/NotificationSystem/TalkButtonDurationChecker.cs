@@ -31,6 +31,14 @@ namespace Convai.Scripts.Runtime.Addons
 
         private void Awake()
         {
+            // Aquí verificamos si algún componente esencial está presente
+            _uiAppearanceSettings = FindObjectOfType<UIAppearanceSettings>();
+
+            if (_uiAppearanceSettings == null)
+            {
+                Debug.LogError("UIAppearanceSettings no encontrado en la escena.");
+            }
+
             _uiAppearanceSettings = FindObjectOfType<UIAppearanceSettings>();
         }
 

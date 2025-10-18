@@ -49,8 +49,11 @@ namespace Convai.Scripts.Runtime.UI
 
         public Dictionary<UIType, IChatUI> GetUIAppearances { get; } = new();
 
+        
+
         private void Awake()
         {
+
             if (Instance != null)
             {
                 // Log a warning and destroy the duplicate instance
@@ -66,6 +69,7 @@ namespace Convai.Scripts.Runtime.UI
             InitializeUIStrategies();
 
             _hasPlayerData = ConvaiPlayerDataSO.GetPlayerData(out _convaiPlayerData);
+
         }
 
         // Subscribe to events when this component is enabled.

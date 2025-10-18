@@ -16,6 +16,29 @@ namespace Convai.Scripts.Runtime.Core
 
         private ConvaiInputManager InputManager => ConvaiInputManager.Instance ? ConvaiInputManager.Instance : null;
 
+        private void Awake()
+        {
+            // Verificamos que las dependencias necesarias estén presentes
+            _convaiChatUIHandler = FindObjectOfType<ConvaiChatUIHandler>();
+            _convaiCrosshairHandler = FindObjectOfType<ConvaiCrosshairHandler>();
+
+            if (_convaiChatUIHandler == null)
+            {
+                Debug.LogError("ConvaiChatUIHandler no encontrado en la escena.");
+            }
+
+            if (_convaiCrosshairHandler == null)
+            {
+                Debug.LogError("ConvaiCrosshairHandler no encontrado en la escena.");
+            }
+
+            // Si ambas referencias son válidas, podemos proceder a la inicialización
+            if (_convaiChatUIHandler != null && _convaiCrosshairHandler != null)
+            {
+                // Inicialización correcta
+            }
+        }
+
         private void OnEnable()
         {
             if (InputManager == null) return;
@@ -36,9 +59,9 @@ namespace Convai.Scripts.Runtime.Core
 
         public void Initialize(ConvaiNPC convaiNPC, ConvaiCrosshairHandler convaiCrosshairHandler, ConvaiChatUIHandler convaiChatUIHandler)
         {
-            _convaiNPC = convaiNPC ? convaiNPC : throw new ArgumentNullException(nameof(convaiNPC));
-            _convaiCrosshairHandler = convaiCrosshairHandler ? convaiCrosshairHandler : throw new ArgumentNullException(nameof(convaiCrosshairHandler));
-            _convaiChatUIHandler = convaiChatUIHandler ? convaiChatUIHandler : throw new ArgumentNullException(nameof(convaiChatUIHandler));
+            _convaiNPC = convaiNPC ?? throw new ArgumentNullException(nameof(convaiNPC));
+            _convaiCrosshairHandler = convaiCrosshairHandler ?? throw new ArgumentNullException(nameof(convaiCrosshairHandler));
+            _convaiChatUIHandler = convaiChatUIHandler ?? throw new ArgumentNullException(nameof(convaiChatUIHandler));
         }
 
         private void UpdateCurrentInputField(TMP_InputField inputFieldInScene)
