@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11106f3af7e7584887067b0f55c83c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VideoSceneChange
-  nextSceneName: QuizValen
+  nextSceneName: Convai Demo - AR
 --- !u!1 &1060925767
 GameObject:
   m_ObjectHideFlags: 0
