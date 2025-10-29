@@ -233,6 +233,36 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 6867300803679388543, guid: 1c7240de04486c342a3760cbdb2f4781,
+        type: 3}
+      propertyPath: planeDetectedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 78ec272e99f24c042b0af4291c200c5c, type: 2}
+    - target: {fileID: 7706476171146102815, guid: 1c7240de04486c342a3760cbdb2f4781,
+        type: 3}
+      propertyPath: modules.Array.data[0].recolectableTag
+      value: Recolectable1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706476171146102815, guid: 1c7240de04486c342a3760cbdb2f4781,
+        type: 3}
+      propertyPath: modules.Array.data[1].recolectableTag
+      value: Recolectable2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706476171146102815, guid: 1c7240de04486c342a3760cbdb2f4781,
+        type: 3}
+      propertyPath: modules.Array.data[2].recolectableTag
+      value: Recolectable3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706476171146102815, guid: 1c7240de04486c342a3760cbdb2f4781,
+        type: 3}
+      propertyPath: modules.Array.data[3].recolectableTag
+      value: Recolectable4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706476171146102815, guid: 1c7240de04486c342a3760cbdb2f4781,
+        type: 3}
+      propertyPath: modules.Array.data[4].recolectableTag
+      value: Recolectable5
+      objectReference: {fileID: 0}
     - target: {fileID: 7909718456712256434, guid: 1c7240de04486c342a3760cbdb2f4781,
         type: 3}
       propertyPath: m_TagString

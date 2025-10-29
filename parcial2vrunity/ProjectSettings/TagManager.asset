@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - Placa
+  - Character
+  - SenderTMP
+  - Recolectable1
+  - Recolectable2
+  - Recolectable3
+  - Recolectable4
+  - Recolectable5
   layers:
   - Default
   - TransparentFX
