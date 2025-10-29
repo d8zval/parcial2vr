@@ -56,7 +56,7 @@ public class RecorridoUAO : MonoBehaviour
         {
             (0f, 5f, "Para guardar tu progreso, solo tienes que pasar por encima de las placas rojas."),
             (5f, 9f, "¡Verás cómo se vuelven verdes cuando las pises!"),
-            (9f, 22f, "Cuando todas las placas de un stand estén verdes, habrás alcanzado el 100% de progreso en ese stand y se desbloqueará un quiz con preguntas sobre lo que aprendiste.")
+            (9f, 22f, "Cuando todas las placas de un stand estén verdes, habrás alcanzado el 100% de progreso en ese stand y se desbloqueará un 50 UAO recolectable del color del stand.")
         }));
 
         if (omitido) yield break;
@@ -65,7 +65,6 @@ public class RecorridoUAO : MonoBehaviour
         yield return StartCoroutine(ReproducirAudio(2, new (float, float, string)[]
         {
             (0f, 6f, "Hay cinco stands en total, así que ¡prepárate para explorar mucho!"),
-            (6f, 16f, "Pero ojo, si pierdes una vida, tendrás que volver a hacer el quiz de ese stand para poder completar el recorrido de esa década.")
         }));
 
         if (omitido) yield break;
@@ -73,7 +72,7 @@ public class RecorridoUAO : MonoBehaviour
         // ---------- AUDIO 4 ----------
         yield return StartCoroutine(ReproducirAudio(3, new (float, float, string)[]
         {
-            (0f, 5f, "Cada vez que superes un quiz, ganarás una parte de la Estrella Autónoma."),
+            (0f, 5f, "Cada vez que recolectes un 50 UAO, ganarás una parte de la Estrella Autónoma."),
             (5f, 17f, "Y cuando completes sus 5 partes, podrás acceder a un espacio especial para tomarte una foto conmemorativa de los 50 años de la UAO.")
         }));
 
