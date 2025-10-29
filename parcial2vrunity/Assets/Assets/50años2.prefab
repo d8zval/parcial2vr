@@ -4914,6 +4914,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7918335002988649766, guid: 1188188e0f9fbff409f0cf5a6e128d6f,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cbfcebf9f6cbf054ebd163fe028a9dbb, type: 2}
     - target: {fileID: -4292154010595695564, guid: 1188188e0f9fbff409f0cf5a6e128d6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4957,11 +4962,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1188188e0f9fbff409f0cf5a6e128d6f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2914519401475342927}
+      addedObject: {fileID: 2685407408105860348}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1188188e0f9fbff409f0cf5a6e128d6f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2685407408105860348}
+      addedObject: {fileID: 1124359332293115872}
   m_SourcePrefab: {fileID: 100100000, guid: 1188188e0f9fbff409f0cf5a6e128d6f, type: 3}
 --- !u!4 &4682036160480856073 stripped
 Transform:
@@ -4975,19 +4980,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5148553810742063074}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2914519401475342927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5454492159284515507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ac47376ea6d43449912485d881ce67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RecolectableTrigger
-  moduleIndex: 1
 --- !u!65 &2685407408105860348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5009,3 +5001,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9908514, y: 2.108433, z: 1}
   m_Center: {x: 0.13738959, y: 0.28268576, z: 6.104479e-10}
+--- !u!114 &1124359332293115872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5454492159284515507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38188cef80114d84e92b1a46214ee64a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjetoRecolectable
+  moduleID: 1

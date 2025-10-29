@@ -1,42 +1,46 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
 public class MenuButtonSpriteLogic : MonoBehaviour
 {
-    [Header("Sprites del botÛn")]
+    [Header("Sprites del bot√≥n")]
     public Sprite spriteBloqueado;
     public Sprite spriteActivo;
 
-    [Header("ConfiguraciÛn de estados")]
-    public bool estaDesbloqueado = false;     // Estado inicial
-    public float duracionMensaje = 2f;        // DuraciÛn del mensaje de bloqueo
+    [Header("Configuraci√≥n de estados")]
+    public bool estaDesbloqueado = false;
+    public float duracionMensaje = 1.2f;
 
     [Header("Referencias")]
-    public GameObject mensajeBloqueadoPanel;  // Panel o mensaje de "bloqueado"
-    public int moduloIndex = 0;               // Õndice del mÛdulo a abrir (0 = primer mÛdulo)
+    public GameObject mensajeBloqueadoPanel;
+    public GameObject textoDesbloqueado;
+    public int moduloIndex = 0;
 
     [Header("Sonidos")]
-    public AudioSource audioSource;           // Fuente de audio (puede estar en el mismo objeto)
-    public AudioClip sonidoBloqueado;         // Sonido al intentar clic bloqueado
-    public AudioClip sonidoDesbloquear;       // Sonido al desbloquear el botÛn
-    public AudioClip sonidoClickDesbloqueado; // Sonido al hacer clic desbloqueado
+    public AudioSource audioSource;
+    public AudioClip sonidoBloqueado;
+    public AudioClip sonidoDesbloquear;
+    public AudioClip sonidoClickDesbloqueado;
 
     private Image imagenBoton;
     private Button boton;
     private Coroutine mensajeCoroutine;
     private bool ultimoEstado;
 
+    // üîπ Variable est√°tica para controlar si hay un texto desbloqueado activo
+    private static bool textoMostrandose = false;
+
     void Awake()
     {
         imagenBoton = GetComponent<Image>();
         boton = GetComponent<Button>();
+
         if (audioSource == null)
         {
             audioSource = GetComponent<AudioSource>();
             if (audioSource == null)
             {
-                // Crear autom·ticamente un AudioSource si no existe
                 audioSource = gameObject.AddComponent<AudioSource>();
                 audioSource.playOnAwake = false;
             }
@@ -48,11 +52,13 @@ public class MenuButtonSpriteLogic : MonoBehaviour
         ultimoEstado = estaDesbloqueado;
         ActualizarSprite();
         boton.onClick.AddListener(OnClickBoton);
+
+        if (textoDesbloqueado != null)
+            textoDesbloqueado.SetActive(false);
     }
 
     void Update()
     {
-        // Detectar cambio manual en tiempo real desde el Inspector
         if (estaDesbloqueado != ultimoEstado)
         {
             ActualizarSprite();
@@ -64,7 +70,7 @@ public class MenuButtonSpriteLogic : MonoBehaviour
     {
         if (!estaDesbloqueado)
         {
-            Debug.Log($"BotÛn bloqueado ({name}), mostrando mensaje...");
+            Debug.Log($"Bot√≥n bloqueado ({name}), mostrando mensaje...");
             ReproducirSonido(sonidoBloqueado);
 
             if (mensajeBloqueadoPanel != null)
@@ -76,13 +82,13 @@ public class MenuButtonSpriteLogic : MonoBehaviour
         }
         else
         {
-            Debug.Log($"BotÛn desbloqueado ({name}), realizando acciÛn para el mÛdulo {moduloIndex}...");
+            Debug.Log($"Bot√≥n desbloqueado ({name}), realizando acci√≥n para el m√≥dulo {moduloIndex}...");
             ReproducirSonido(sonidoClickDesbloqueado);
-
-            // AquÌ puedes definir la acciÛn que quieres realizar cuando el botÛn estÈ desbloqueado
-            // Por ejemplo, podrÌas cambiar de escena, mostrar un panel, etc.
-            // En este caso, vamos a mostrar un mensaje de ejemplo:
             MostrarMensajeAccion(moduloIndex);
+
+            // üîπ Mostrar texto solo si no hay otro texto visible
+            if (textoDesbloqueado != null && !textoMostrandose)
+                StartCoroutine(MostrarTextoDesbloqueado());
         }
     }
 
@@ -103,14 +109,14 @@ public class MenuButtonSpriteLogic : MonoBehaviour
     {
         estaDesbloqueado = false;
         ActualizarSprite();
-        Debug.Log("BotÛn bloqueado manualmente.");
+        Debug.Log("Bot√≥n bloqueado manualmente.");
     }
 
     public void Desbloquear()
     {
         estaDesbloqueado = true;
         ActualizarSprite();
-        Debug.Log("BotÛn desbloqueado manualmente.");
+        Debug.Log("Bot√≥n desbloqueado manualmente.");
         ReproducirSonido(sonidoDesbloquear);
     }
 
@@ -118,24 +124,31 @@ public class MenuButtonSpriteLogic : MonoBehaviour
     {
         estaDesbloqueado = !estaDesbloqueado;
         ActualizarSprite();
-        Debug.Log(estaDesbloqueado ? "BotÛn desbloqueado." : "BotÛn bloqueado.");
+        Debug.Log(estaDesbloqueado ? "Bot√≥n desbloqueado." : "Bot√≥n bloqueado.");
 
         if (estaDesbloqueado)
             ReproducirSonido(sonidoDesbloquear);
     }
 
+    private IEnumerator MostrarTextoDesbloqueado()
+    {
+        textoMostrandose = true; // marcar que ya hay texto en pantalla
+        textoDesbloqueado.SetActive(true);
+
+        yield return new WaitForSeconds(2f);
+
+        textoDesbloqueado.SetActive(false);
+        textoMostrandose = false; // liberar el ‚Äúbloqueo‚Äù de texto
+    }
+
     private void ReproducirSonido(AudioClip clip)
     {
         if (audioSource != null && clip != null)
-        {
             audioSource.PlayOneShot(clip);
-        }
     }
 
-    // AcciÛn que se realiza cuando el botÛn desbloqueado es presionado (aquÌ puedes personalizarlo)
     private void MostrarMensajeAccion(int moduloIndex)
     {
-        // Mostrar el mensaje de que el mÛdulo est· abierto
-        Debug.Log($"MÛdulo {moduloIndex} completado. AcciÛn realizada.");
+        Debug.Log($"M√≥dulo {moduloIndex} completado. Acci√≥n realizada.");
     }
 }

@@ -1,136 +1,156 @@
+ï»¿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Collections;
 
 public class CanvasManager : MonoBehaviour
 {
-    [Header("UI Elements")]
-    public RawImage[] collectionImages;  // Las 5 imágenes de colección (correspondientes a cada objeto recolectable)
-    public GameObject[] starParts; // Las partes de la estrella que se activan por módulo
-    public GameObject transitionButton;  // El botón que aparecerá al completar la estrella
+    public static CanvasManager Instance;  // Singleton de CanvasManager
 
-    [Header("Audio")]
-    public AudioClip collectionSound;  // Sonido de recolección
+    public Image[] starPartsImages;  // ImÃ¡genes de las partes de la estrella
+    public RawImage[] starPartsRawImages;  // RawImages que se activan junto a cada parte (si es necesario)
+    public GameObject emptyStar;        // El objeto vacÃ­o que contiene todas las partes de la estrella
+    public Transform targetPosition;    // La posiciÃ³n donde la estrella debe moverse cuando estÃ© completa
 
-    [Header("Posición Final")]
-    public Transform finalPosition;  // Posición final para la animación de la estrella
+    public GameObject[] objectsToDisable;  // Objetos que se desactivarÃ¡n antes de mover la estrella
+    public Button[] otherButtons;          // Array de botones que se deshabilitarÃ¡n al recolectar un objeto
 
-    [Header("Objetos a Desactivar")]
-    public GameObject[] objectsToDeactivate;  // 16 GameObjects a desactivar al final de la animación
+    public Button starButton;         // BotÃ³n que llevarÃ¡ a la escena final
+    public AudioClip collectSound;    // Sonido al recolectar un objeto
+    public AudioClip starMoveSound;   // Sonido para la animaciÃ³n de la estrella
 
-    private void Start()
+    private int collectedParts = 0;
+    private AudioSource audioSource;  // Referencia al AudioSource
+
+    void Awake()
     {
-        // Desactivar el botón de transición al inicio
-        transitionButton.SetActive(false);
-
-        // Desactivar todas las imágenes de colección al inicio
-        foreach (var image in collectionImages)
+        // Singleton
+        if (Instance == null)
         {
-            image.gameObject.SetActive(false);
+            Instance = this;
+            DontDestroyOnLoad(gameObject);  // Mantener el CanvasManager entre escenas
+        }
+        else
+        {
+            Destroy(gameObject); // Destruir si ya existe una instancia
         }
     }
 
-    // Esta función se llama cuando el jugador recoge un objeto
-    public void OnObjectCollected(int moduleIndex)
+    void Start()
     {
-        // Reproducir sonido al recolectar el objeto
-        if (collectionSound != null)
+        // Verificar si el AudioSource estÃ¡ presente
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
         {
-            AudioSource.PlayClipAtPoint(collectionSound, Camera.main.transform.position);
+            // Si no hay AudioSource, lo agregamos
+            audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        // Activar la parte correspondiente de la estrella
-        ActivateStarPart(moduleIndex);
-
-        // Activar la imagen de recolección correspondiente
-        ActivateCollectionImage(moduleIndex);
-
-        // Si la estrella está completa, moverla a la posición final
-        if (IsStarCompleted())
+        // Desactivar todas las imÃ¡genes de las partes de la estrella al inicio
+        foreach (Image img in starPartsImages)
         {
-            StartCoroutine(MoveStarToFinalPosition());
+            img.gameObject.SetActive(false);
         }
-    }
 
-    // Activar la parte de la estrella correspondiente al módulo que se recolectó
-    private void ActivateStarPart(int moduleIndex)
-    {
-        if (moduleIndex >= 0 && moduleIndex < starParts.Length)
+        // Desactivar las RawImages si las hay
+        foreach (RawImage img in starPartsRawImages)
         {
-            // Activar la parte de la estrella según el índice
-            starParts[moduleIndex].SetActive(true);
+            img.gameObject.SetActive(false);
+        }
+
+        // Desactivar el botÃ³n para la escena final al principio
+        if (starButton != null)
+        {
+            starButton.interactable = false;  // Hacer que el botÃ³n no sea clickeable al inicio
         }
     }
 
-    // Comprobar si todas las partes de la estrella están activas (completada)
-    private bool IsStarCompleted()
+    // MÃ©todo que se llama cuando se recoge un objeto recolectable
+    public void ActivarParteDeLaEstrella(int moduleID)
     {
-        foreach (GameObject part in starParts)
+        // Activar la imagen correspondiente de la estrella
+        if (moduleID >= 0 && moduleID < starPartsImages.Length)
         {
-            if (!part.activeSelf) return false;  // Si alguna parte está desactivada, no está completa
-        }
-        return true;
-    }
+            // Activar la parte de la estrella correspondiente
+            starPartsImages[moduleID].gameObject.SetActive(true);
 
-    // Mover la estrella a la posición final con animación
-    private IEnumerator MoveStarToFinalPosition()
-    {
-        // Posición final de la estrella (usando el Transform asignado en el Inspector)
-        Vector3 targetPosition = finalPosition.position;
+            // TambiÃ©n activamos el RawImage correspondiente si lo hay
+            if (moduleID < starPartsRawImages.Length)
+                starPartsRawImages[moduleID].gameObject.SetActive(true);
 
-        // Aquí va la animación para mover la estrella completa a la posición final
-        Vector3 startPosition = starParts[0].transform.position; // Posición inicial de la estrella
-        float time = 0;
-        float duration = 2.0f;  // Duración de la animación (puedes ajustarla)
-
-        while (time < duration)
-        {
-            time += Time.deltaTime;
-            float lerpFactor = time / duration;
-
-            foreach (var part in starParts)
+            // Reproducir sonido de recolecciÃ³n, si se ha asignado
+            if (collectSound != null && audioSource != null)
             {
-                part.transform.position = Vector3.Lerp(startPosition, targetPosition, lerpFactor);
+                audioSource.PlayOneShot(collectSound);
             }
+
+            collectedParts++;
+
+            Debug.Log($"Parte {moduleID + 1} de la estrella activada");
+
+            // Desactivar el botÃ³n correspondiente al objeto recolectado
+            if (otherButtons != null && moduleID < otherButtons.Length)
+            {
+                otherButtons[moduleID].interactable = false;  // Desactivar solo el botÃ³n correspondiente
+            }
+
+            // Si todas las partes estÃ¡n recogidas, mover la estrella
+            if (collectedParts == starPartsImages.Length)
+            {
+                StartCoroutine(MoveStarToTarget());
+            }
+        }
+    }
+
+    // Coroutine para mover la estrella a su posiciÃ³n final
+    private IEnumerator MoveStarToTarget()
+    {
+        // Desactivar los objetos especÃ­ficos antes de mover la estrella
+        foreach (GameObject obj in objectsToDisable)
+        {
+            if (obj != null)
+                obj.SetActive(false);
+        }
+
+        // Reproducir sonido de la animaciÃ³n de la estrella
+        if (starMoveSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(starMoveSound);
+        }
+
+        // Mover la estrella a la posiciÃ³n de destino
+        Vector3 initialPosition = emptyStar.transform.position;
+        Vector3 target = targetPosition.position;
+
+        float duration = 2f;  // DuraciÃ³n del movimiento
+        float timeElapsed = 0f;
+
+        while (timeElapsed < duration)
+        {
+            emptyStar.transform.position = Vector3.Lerp(initialPosition, target, timeElapsed / duration);
+            timeElapsed += Time.deltaTime;
             yield return null;
         }
 
-        // Desactivar los 16 objetos al finalizar la animación
-        DeactivateObjects();
+        // Asegurarse de que la estrella estÃ© exactamente en la posiciÃ³n de destino
+        emptyStar.transform.position = target;
 
-        // Activar el botón de transición para ir a la siguiente escena
-        ActivateTransitionButton();
-    }
-
-    // Desactivar los 16 objetos al final de la animación
-    private void DeactivateObjects()
-    {
-        foreach (var obj in objectsToDeactivate)
+        // Una vez movida, habilitamos el Empty como un "botÃ³n" para ir a la escena final
+        if (starButton != null)
         {
-            obj.SetActive(false);
+            starButton.interactable = true;  // Habilitar el botÃ³n para la siguiente escena
+
+            // Asegurarnos de que el botÃ³n tiene la acciÃ³n asociada para cargar la escena
+            starButton.onClick.RemoveAllListeners();  // Limpiar cualquier listener anterior
+            starButton.onClick.AddListener(LoadNextScene);  // Asignar la acciÃ³n de cargar la escena
         }
     }
 
-    // Activar el botón de transición
-    private void ActivateTransitionButton()
+    // MÃ©todo para cargar la siguiente escena
+    private void LoadNextScene()
     {
-        transitionButton.SetActive(true);
-        transitionButton.GetComponent<Button>().onClick.AddListener(GoToNextScene);
+        // Asumimos que ya tienes la escena final configurada
+        SceneManager.LoadScene("FiltrosEscena");  // Cambia "SceneFinal" por el nombre de tu escena final
     }
 
-    // Cambiar a la siguiente escena
-    private void GoToNextScene()
-    {
-        // Aquí deberías cargar la siguiente escena (ajusta el nombre de la escena según sea necesario)
-        UnityEngine.SceneManagement.SceneManager.LoadScene("NextScene");  // Cambia "NextScene" por el nombre real
-    }
-
-    // Activar la imagen de colección correspondiente
-    private void ActivateCollectionImage(int index)
-    {
-        if (index >= 0 && index < collectionImages.Length)
-        {
-            collectionImages[index].gameObject.SetActive(true);
-        }
-    }
 }
