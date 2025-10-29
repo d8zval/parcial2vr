@@ -32,14 +32,14 @@ public class MapManager : MonoBehaviour
     {
         if (index >= 0 && index < spawnPoints.Length)  // Asegurarse de que el índice esté dentro del rango
         {
-            // Instanciamos el objeto en el punto de spawn correspondiente dentro del prefab
-            GameObject recolectable = Instantiate(recolectablePrefab, spawnPoints[index].position, Quaternion.identity);
+            // Instanciamos el objeto en el punto de spawn correspondiente, usando la rotación del spawn point
+            GameObject recolectable = Instantiate(recolectablePrefab, spawnPoints[index].position, spawnPoints[index].rotation);
 
             // Aseguramos que el objeto recolectable sea hijo del prefab del mapa
             recolectable.transform.SetParent(spawnPoints[index].parent);  // Colocamos como hijo del mapa
 
             recolectable.SetActive(true); // Asegúrate de que el objeto esté activo
-            Debug.Log($"Objeto recolectable colocado en: {spawnPoints[index].position}");
+            Debug.Log($"Objeto recolectable colocado en: {spawnPoints[index].position} con rotación: {spawnPoints[index].rotation}");
             return recolectable;
         }
         else
