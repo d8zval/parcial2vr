@@ -14,7 +14,6 @@ public class MenuButtonSpriteLogic : MonoBehaviour
 
     [Header("Referencias")]
     public GameObject mensajeBloqueadoPanel;  // Panel o mensaje de "bloqueado"
-    public QuizManager quizManager;           // Referencia al QuizManager
     public int moduloIndex = 0;               // Índice del módulo a abrir (0 = primer módulo)
 
     [Header("Sonidos")]
@@ -77,17 +76,13 @@ public class MenuButtonSpriteLogic : MonoBehaviour
         }
         else
         {
-            Debug.Log($"Botón desbloqueado ({name}), iniciando módulo {moduloIndex}...");
+            Debug.Log($"Botón desbloqueado ({name}), realizando acción para el módulo {moduloIndex}...");
             ReproducirSonido(sonidoClickDesbloqueado);
 
-            if (quizManager != null)
-            {
-                quizManager.SeleccionarModulo(moduloIndex);
-            }
-            else
-            {
-                Debug.LogWarning("No se asignó el QuizManager en el botón.");
-            }
+            // Aquí puedes definir la acción que quieres realizar cuando el botón esté desbloqueado
+            // Por ejemplo, podrías cambiar de escena, mostrar un panel, etc.
+            // En este caso, vamos a mostrar un mensaje de ejemplo:
+            MostrarMensajeAccion(moduloIndex);
         }
     }
 
@@ -135,5 +130,12 @@ public class MenuButtonSpriteLogic : MonoBehaviour
         {
             audioSource.PlayOneShot(clip);
         }
+    }
+
+    // Acción que se realiza cuando el botón desbloqueado es presionado (aquí puedes personalizarlo)
+    private void MostrarMensajeAccion(int moduloIndex)
+    {
+        // Mostrar el mensaje de que el módulo está abierto
+        Debug.Log($"Módulo {moduloIndex} completado. Acción realizada.");
     }
 }

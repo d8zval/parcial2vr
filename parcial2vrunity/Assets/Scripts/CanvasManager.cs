@@ -5,18 +5,29 @@ using System.Collections;
 public class CanvasManager : MonoBehaviour
 {
     [Header("UI Elements")]
-    public RawImage collectionImage;  // Imagen que muestra que se ha recolectado un objeto
-    public Image starImage;  // La estrella que va por partes
+    public RawImage[] collectionImages;  // Las 5 imágenes de colección (correspondientes a cada objeto recolectable)
     public GameObject[] starParts; // Las partes de la estrella que se activan por módulo
     public GameObject transitionButton;  // El botón que aparecerá al completar la estrella
 
     [Header("Audio")]
     public AudioClip collectionSound;  // Sonido de recolección
 
+    [Header("Posición Final")]
+    public Transform finalPosition;  // Posición final para la animación de la estrella
+
+    [Header("Objetos a Desactivar")]
+    public GameObject[] objectsToDeactivate;  // 16 GameObjects a desactivar al final de la animación
+
     private void Start()
     {
         // Desactivar el botón de transición al inicio
         transitionButton.SetActive(false);
+
+        // Desactivar todas las imágenes de colección al inicio
+        foreach (var image in collectionImages)
+        {
+            image.gameObject.SetActive(false);
+        }
     }
 
     // Esta función se llama cuando el jugador recoge un objeto
@@ -28,11 +39,11 @@ public class CanvasManager : MonoBehaviour
             AudioSource.PlayClipAtPoint(collectionSound, Camera.main.transform.position);
         }
 
-        // Activar la imagen de recolección
-        collectionImage.gameObject.SetActive(true);
-
         // Activar la parte correspondiente de la estrella
         ActivateStarPart(moduleIndex);
+
+        // Activar la imagen de recolección correspondiente
+        ActivateCollectionImage(moduleIndex);
 
         // Si la estrella está completa, moverla a la posición final
         if (IsStarCompleted())
@@ -64,8 +75,8 @@ public class CanvasManager : MonoBehaviour
     // Mover la estrella a la posición final con animación
     private IEnumerator MoveStarToFinalPosition()
     {
-        // Posición final de la estrella (puedes asignar un empty para la posición final)
-        Vector3 targetPosition = new Vector3(10, 10, 0);  // Ajusta la posición final
+        // Posición final de la estrella (usando el Transform asignado en el Inspector)
+        Vector3 targetPosition = finalPosition.position;
 
         // Aquí va la animación para mover la estrella completa a la posición final
         Vector3 startPosition = starParts[0].transform.position; // Posición inicial de la estrella
@@ -84,8 +95,20 @@ public class CanvasManager : MonoBehaviour
             yield return null;
         }
 
+        // Desactivar los 16 objetos al finalizar la animación
+        DeactivateObjects();
+
         // Activar el botón de transición para ir a la siguiente escena
         ActivateTransitionButton();
+    }
+
+    // Desactivar los 16 objetos al final de la animación
+    private void DeactivateObjects()
+    {
+        foreach (var obj in objectsToDeactivate)
+        {
+            obj.SetActive(false);
+        }
     }
 
     // Activar el botón de transición
@@ -100,5 +123,14 @@ public class CanvasManager : MonoBehaviour
     {
         // Aquí deberías cargar la siguiente escena (ajusta el nombre de la escena según sea necesario)
         UnityEngine.SceneManagement.SceneManager.LoadScene("NextScene");  // Cambia "NextScene" por el nombre real
+    }
+
+    // Activar la imagen de colección correspondiente
+    private void ActivateCollectionImage(int index)
+    {
+        if (index >= 0 && index < collectionImages.Length)
+        {
+            collectionImages[index].gameObject.SetActive(true);
+        }
     }
 }
