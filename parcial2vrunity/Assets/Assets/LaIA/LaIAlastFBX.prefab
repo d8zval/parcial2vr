@@ -98,6 +98,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c25d0eaa9cc0b3e48bee6c7cbf937a67, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 3ba464400c8c44541a1df15fa2951182,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -318,8 +323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <TargetObject>k__BackingField: {fileID: 0}
-  trackingDistance: 10
-  turnSpeed: 5
+  trackingDistance: 0
+  turnSpeed: 10
   bodyLookAtWeight: 0.6
   headLookAtWeight: 0.8
   eyesLookAtWeight: 0.85

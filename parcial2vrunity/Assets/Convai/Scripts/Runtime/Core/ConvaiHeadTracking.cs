@@ -253,13 +253,19 @@ namespace Convai.Scripts.Runtime.Core
         /// </summary>
         private void DrawRayToTarget()
         {
-            Vector3 pos = transform.position;
-            // Draw a debug ray from our position to the normalized direction towards the target, scaled by half of the tracking distance threshold.
-            // The purpose is to visualize the direction and focus of the head tracking, and it's a useful debug tool in Unity's Scene view.
-            // "Normalized" ensures that the vector has a magnitude (length) of 1, keeping the scaling of the vector consistent.
-            // This ray appears red in the Scene view.
-            Debug.DrawRay(pos,
-                (TargetObject.position - pos).normalized * trackingDistance / 2, Color.red);
+            if (_headPivot == null || TargetObject == null) return;
+
+            // Si tienes _rayOrigin en tu versión más reciente, usa ese en lugar del headPivot:
+            // Vector3 origin = _rayOrigin ? _rayOrigin.position : _headPivot.position;
+            Vector3 origin = _headPivot.position;
+
+            Vector3 dir = (TargetObject.position - origin).normalized;
+
+            // Ray de depuración saliendo desde la CABEZA, no desde los pies
+            Debug.DrawRay(origin, dir * (trackingDistance / 2f), Color.magenta);
+
+            // (Opcional) dibuja una línea directa hasta el target para ver el vector completo:
+            Debug.DrawLine(origin, TargetObject.position, Color.yellow);
         }
 
         public void SetActionRunning(bool newValue)
