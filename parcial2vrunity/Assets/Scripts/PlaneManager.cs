@@ -11,7 +11,7 @@ public class PlaneManager : MonoBehaviour
     [SerializeField] private Camera arCamera;
 
     [Header("Configuración de posición")]
-    [SerializeField] private float distancia = 1.0f; // Distancia frente al usuario
+    [SerializeField] private float distancia = 5.0f; // Distancia frente al usuario
 
     private GameObject model3DPlaced;
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();

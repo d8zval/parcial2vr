@@ -708,11 +708,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5462426395690898212, guid: 1c7240de04486c342a3760cbdb2f4781,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5616997167326226878, guid: 1c7240de04486c342a3760cbdb2f4781,
         type: 3}
       propertyPath: textoDesbloqueado
@@ -728,11 +723,6 @@ PrefabInstance:
       propertyPath: textoDesbloqueado
       value: 
       objectReference: {fileID: 691568}
-    - target: {fileID: 6867300803679388543, guid: 1c7240de04486c342a3760cbdb2f4781,
-        type: 3}
-      propertyPath: offsetY
-      value: -47.77
-      objectReference: {fileID: 0}
     - target: {fileID: 6867300803679388543, guid: 1c7240de04486c342a3760cbdb2f4781,
         type: 3}
       propertyPath: planeDetectedMaterial
@@ -827,11 +817,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -15.504883
-      objectReference: {fileID: 0}
-    - target: {fileID: 8824306964692785906, guid: 1c7240de04486c342a3760cbdb2f4781,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9215680946704680268, guid: 1c7240de04486c342a3760cbdb2f4781,
         type: 3}
@@ -1638,7 +1623,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 437102068}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685011623}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
