@@ -1121,7 +1121,6 @@ MonoBehaviour:
   - {fileID: 1370213401}
   - {fileID: 1670828135}
   - {fileID: 484172614}
-  - {fileID: 649228928}
   - {fileID: 70777503}
   otherButtons:
   - {fileID: 741943909}
@@ -1482,12 +1481,6 @@ Transform:
   - {fileID: 1647136145}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &649228928 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5462426395690898212, guid: 1c7240de04486c342a3760cbdb2f4781,
-    type: 3}
-  m_PrefabInstance: {fileID: 437102068}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &653342865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,6 +2212,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3274238494202997138, guid: 418912954873d2341958d83aa22c2e8d,
+        type: 3}
+      propertyPath: m_Text
+      value: "T\xFA"
+      objectReference: {fileID: 0}
     - target: {fileID: 4457854627405288874, guid: 418912954873d2341958d83aa22c2e8d,
         type: 3}
       propertyPath: m_RootOrder
@@ -2275,6 +2273,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4514769744889203613, guid: 418912954873d2341958d83aa22c2e8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4532021802310109860, guid: 418912954873d2341958d83aa22c2e8d,
         type: 3}
       propertyPath: m_IsActive
       value: 0
