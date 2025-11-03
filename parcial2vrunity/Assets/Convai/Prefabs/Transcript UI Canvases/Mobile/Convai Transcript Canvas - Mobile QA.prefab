@@ -470,7 +470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: -907}
+  m_AnchoredPosition: {x: -335, y: -907}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &7131202170761760408
@@ -563,6 +563,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 107017007118864224, guid: 3112099c7290efb46ae795742b87e772,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 829547071557649324, guid: 3112099c7290efb46ae795742b87e772,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1001437745684088551, guid: 3112099c7290efb46ae795742b87e772,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -848,9 +858,19 @@ PrefabInstance:
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
+    - target: {fileID: 6510036188279287561, guid: 3112099c7290efb46ae795742b87e772,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7264464442283747134, guid: 3112099c7290efb46ae795742b87e772,
         type: 3}
       propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482619724715334772, guid: 3112099c7290efb46ae795742b87e772,
+        type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7666773675509407071, guid: 3112099c7290efb46ae795742b87e772,

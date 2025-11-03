@@ -2210,12 +2210,7 @@ PrefabInstance:
     - target: {fileID: 2730296167053787351, guid: 418912954873d2341958d83aa22c2e8d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3274238494202997138, guid: 418912954873d2341958d83aa22c2e8d,
-        type: 3}
-      propertyPath: m_Text
-      value: "T\xFA"
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4457854627405288874, guid: 418912954873d2341958d83aa22c2e8d,
         type: 3}
