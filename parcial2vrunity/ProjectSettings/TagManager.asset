@@ -12,6 +12,11 @@ TagManager:
   - Recolectable3
   - Recolectable4
   - Recolectable5
+  - video70s
+  - video80s
+  - video90s
+  - video00s
+  - video10s
   layers:
   - Default
   - TransparentFX
