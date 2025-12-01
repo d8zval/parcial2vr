@@ -997,7 +997,7 @@ PrefabInstance:
         type: 3}
       propertyPath: modules.Array.data[0].recolectablePrefab
       value: 
-      objectReference: {fileID: 6114489140584461674, guid: 62015cadc26914241bfc5c2dcf781a5f,
+      objectReference: {fileID: 5650270249844686503, guid: 8d8fcd105281d024aa75b766a66644a4,
         type: 3}
     - target: {fileID: 7706476171146102815, guid: 1c7240de04486c342a3760cbdb2f4781,
         type: 3}
