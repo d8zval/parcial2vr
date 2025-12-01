@@ -17,6 +17,8 @@ TagManager:
   - video90s
   - video00s
   - video10s
+  - doc170s
+  - doc270s
   layers:
   - Default
   - TransparentFX
